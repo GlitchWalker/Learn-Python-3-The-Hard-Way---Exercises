@@ -1,0 +1,4 @@
+1. Use a + when something between brackets contains an expression;
+    Using a comma instead causes a SyntaxError
+
+2. I need to copy the lines accurately and not miss any!!

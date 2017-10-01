@@ -1,0 +1,101 @@
+words:
+
+def         - used to define a function
+function    - something that performs some operation
+
+    def i_am_a_function(give_me_argument, give_me_argument):
+    i_am_a_function(argument1, argument 2)
+
+    def i_am_a_function_without_arguments():
+    i_am_a_function_without_arguments()
+
+    def i_perform_my_function_then_return_result(number1, number2)
+        result = number1 + number2
+        return result
+
+    number = i_perform_my_function_then_return_result(1, 1)
+    number = 2
+
+variable    - a value, can be a string, boolean, float or int
+global VARIABLE - stated variable is global, so changes the value everywhere (usually a variable in a defined function gets defeated afterwards.)
+
+    "I am a string" - This is a string
+    22              - This is an integer
+    22.2            - This is a float
+    True            - This is a boolean
+
+string      - text, numbers, anything you can type between two quoation marks
+boolean     - can only be two values; True or False
+int         - basically, a number without decimal point
+float       - a number with a decimal point
+
+functions:
+print()     - prints any arguments between the parenthesis to the command prompt; a string, boolean, float or int
+int()       - converts a string or float of numbers into an integer (doesn't work on anything not a single number)
+float()     - converts a string or integer of numbers into a float (oesn't work on anything not a single number)
+boolean()   - converts a string to boolean (only works on string of True or False)
+str()       - converts any boolean, float or integer into a string (so 9 becomes "9", True becomes "True")
+input()     - requests a text input from user. Anything between parenthesis is printed first
+
+characters:
+""          - used to input a string as an argument between marks, passes any character apart from itself as if part of string rather than acting on it
+''          - used to input a string as an argument between marks, passes any character apart from itself as if part of string rather than acting on it
+()          - used to pass arguments between marks
+\'          - used before a " or ' to tell it to ignore it as the end of a string
+\"          - used before a " or ' to tell it to ignore it as the end of a string
+\n          - creates a new line/line break between quote marks
+\t          - acts as tab character between quote marks
+\\          - acts as a backslash. Useful where  you want to use backslash immediately befoe the letter n, t etc. so it isn't misinterpreted as a line break, tab character (e.g. \\new should be used instead of \new, otherwise it will create a line break then on the next line print "ew")
+f           - used to format any character between speech marks the interpreter would usually ignore so {variable} can be replaced with its variable
+end=" "     - used as last argument to replace the default line break with whatever is between marks (used if you want user to give answer on same line)
+,           - used to seperate arguments
++           - on int, float and boolean; adds the values
+            - on string; concatanates the values
+-           - subtracts values
+*           - multiplies values
+/           - divides values
+%           - gives the remainder of left value divided by right
+=           - changes the variable on the left to become the variable on the right
+==          - tests if two values are equal (result is boolean)
+>           - tests if first value is larger than second (result is boolean)
+>=          - tests if first value is larger or equal to second (result is boolean)
+<           - tests if first value is smaller than second (result is boolean)
+<=          - tests if first value is smaller or equal to second (result is boolean)
+?=          - tests if first value is not equal to second (result is boolean)
++=          - takes the value on the left and adds value on right to itself (shorthand for x = x + y; x += y)
+#           - completely ignores anything after mark; allows comments to be added
+''' '''     - completely ignores anything between the two groups of three; allows larger comments
+""" """     - completely ignores anything between the two groups of three; allows larger comments
+{}          - calls the variable named between marks and replaces the whole thing including marks with whatever the variable is
+(""" """)   - allows a string that span more than one line, without putting a single set of quotes on each line
+(''' ''')   - same as above
+*ARGUMENT   - used to accept undefined amount of arguments and names the group of arguments whatever is after the *
+ARGUMENT1, ARGUMENT2 = ARGUMENT - used with above to define what each of the arguments given should be called
+
+import MODULE     - imports entire script named into current one
+from MODULE import FEATURE  - imports the function from named script into current script
+
+from sys import argv - used for various functions related to arguments passed to run the script
+arg1, arg2 = argv - turns arguments given to run the script into usable variables within script (first arg will always be the script name)
+
+from os.path import exists - used to ask if a file exists or not
+
+SOMETHING.function() - performs the function on right side of full-stop on the left side, then replaces the whole thing with result.
+
+open(FILENAME) - opens filename given, and creates a file object which contains the file as well as its metadata
+open(FILENAME, "r") - as above, but asks for read permissions. This is the default, so is the same as using open(FILENAME)
+open(FILENAME, "w") - as open(FILENAME), but also asks for write permissions
+open(FILENAME, "w+") - as open(FILENAME, but asks for write AND read permissions)
+
+FILENAME.truncate() - deletes contents of file object's contained file
+FILENAME.read() - reads the contents of the filename given before the full-stop and posts them; puts the seek position of file object at the end.
+FILENAME.write() - writes anything between the parenthesis to the file; replaces what is already there (so .truncate is pointless before this)
+FILENAME.close() - closes the file object given (you should close files after you are done with them)
+FILENAME.seek(0) - used to seek to position of FILENAME declared between the parenthesis (in this case, seeks to the beginning)
+FILENAME.readline() - reads just one line of text (the interpreter starts from line fileobject is currently at, then prints everything until it comes across a line break character)
+
+if STATE - if the state described after if is the current state, run the indented code below (then skip following elif's or else)
+elif STATE - if the current state isn't above if/elif state, then run the below indented code (can be more than one, but if has to be first, then skips following elif's or ifs)
+else STATE - if the current state isn't the above if/elif state, run the indented code
+
+running = false - tells interpreter to stop running script
